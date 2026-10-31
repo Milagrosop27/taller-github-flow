@@ -12,10 +12,10 @@ def procesar_pago_usuario(usuario, tarjeta, monto, pais, es_vip):
 
     monto_final = monto
     if es_vip and monto > 1000:
-        monto_final *= 0.80  
+        monto_final *= 0.80
     elif es_vip:
         monto_final *= 0.90
-    
+
     impuesto = TASA_IMPUEST0.get(pais, 0.0)
     monto_final += monto_final * impuesto
 
